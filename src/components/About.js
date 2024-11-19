@@ -1,5 +1,8 @@
 import React from 'react';
 import './AboutUs.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 
 function About() {
   return (
@@ -29,7 +32,6 @@ function About() {
           </li>
         </ul>
       </nav>
-
       <div className="social-icons-container">
         <h3>Follow Us</h3>
         <div className="social-icons">

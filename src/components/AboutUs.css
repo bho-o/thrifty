@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
@@ -5,6 +6,8 @@ body {
   background-color: #ffffff; /* White background */
   color: #800000; /* Maroon text */
   line-height: 1.8;
+
+  
 }
 
 .about-us-page {
@@ -50,29 +53,32 @@ body {
 }
 
 .navbar li h3 {
-  color: #ffffff; /* White text */
-  margin-bottom: 15px; /* Increased margin */
-  font-size: 24px; /* Increased font size */
+  color: maroon;; 
+  margin-bottom: 15px; 
+  font-size: 24px;
 }
 
 .navbar li p {
-  font-size: 20px; /* Increased font size */
+  font-size: 20px; 
   line-height: 1.8;
-  color: #f0f0f0; /* Lighter text */
+  color: #f0f0f0;
 }
 
 .social-icons-container {
-  margin: 60px 0; /* Increased margin */
+  color:maroon;
+  margin: 60px 0; 
   text-align: center;
 }
 
 .social-icons-container h3 {
   font-size: 32px; /* Increased font size */
-  color: #ffffff; /* White text */
+  color: maroon;; /* White text */
   margin-bottom: 30px; /* Increased margin */
 }
 
 .social-icons {
+  color:maroon;
+
   display: flex;
   justify-content: center;
   gap: 40px; /* Increased gap */
@@ -80,18 +86,18 @@ body {
 
 .icon {
   font-size: 60px; /* Increased icon size */
-  color: #bfbfbf; /* Light gray color */
+  color: maroon; /* Light gray color */
   transition: transform 0.3s, color 0.3s;
 }
 
 .icon:hover {
-  color: #ff7373; /* Maroon on hover */
+  color: black; /* Maroon on hover */
   transform: scale(1.2);
 }
 
 .footer1 {
-  background-color: #4b5563; /* Dark gray background */
-  color: #ffffff; /* White text */
+  background-color: maroon; /* Dark gray background */
+  color: whitesmoke; /* White text */
   padding: 60px 30px; /* Increased padding */
 }
 
@@ -102,12 +108,12 @@ body {
 
 .footer-content h3 {
   font-size: 32px; /* Increased font size */
-  color: #ffd700; /* Gold text */
+  color: whitesmoke; /* Gold text */
 }
 
 .footer-content h4 {
   font-size: 24px; /* Increased font size */
-  color: #ff9e9e; /* Light pink color */
+  color: whitesmoke; /* Light pink color */
 }
 
 .footer-bottom {
@@ -125,11 +131,13 @@ body {
   }
 
   .social-icons {
+    color:whitesmoke;
     flex-direction: column;
     gap: 30px; /* Increased gap */
   }
 
   .icon {
+    color:whitesmoke;
     font-size: 48px; /* Increased icon size */
   }
 }

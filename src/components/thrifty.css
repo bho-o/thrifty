@@ -33,6 +33,7 @@
 
 /* Navigation Menu: Ensure buttons are aligned in a single row */
 .nav-menu {
+  color: white;
   display: flex;
   justify-content: space-evenly; /* Distribute buttons evenly */
   width: 100%; /* Ensure the buttons span the entire width */
@@ -55,6 +56,7 @@
 }
 
 .nav-button:hover {
+  color: white;
   background-color: #d1d5db;
   border-color: #ffffff; /* White border on hover */
 }

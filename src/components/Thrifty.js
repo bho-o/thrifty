@@ -7,7 +7,7 @@ import Cart from './Cart';
 import Profile from './Profile_page';
 import Signup from './Signup_page';
 import About from './About';
-import image from '../Assets/images.jpeg'
+import image from '../Assets/home.jpg'
 import './thrifty.css'; // Import the CSS file
 
 export default function Thrifty() {
