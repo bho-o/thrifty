@@ -1,0 +1,176 @@
+/* General Container */
+.thrifty-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: whitesmoke; /* White background */
+  width: 100%;
+  height: max-content;
+}
+
+/* Header Styling */
+.thrifty-header {
+  background-color: #800000; /* Maroon */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 24px 0; /* Increased padding */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Increased max-width */
+  margin: 0 auto;
+  padding: 0 30px; /* Increased padding */
+}
+
+.brand-logo {
+  font-family: 'Dancing Script', cursive; /* Beautiful cursive font */
+  font-size: 2.5rem; /* Increased font size */
+  font-weight: bold;
+  color: #ffffff; /* White color for the logo */
+}
+
+/* Navigation Menu: Ensure buttons are aligned in a single row */
+.nav-menu {
+  display: flex;
+  justify-content: space-evenly; /* Distribute buttons evenly */
+  width: 100%; /* Ensure the buttons span the entire width */
+  gap: 30px; /* Increased gap */
+  max-width: 1200px; /* Set a max-width to prevent overflow */
+}
+
+.nav-button {
+  color: #ffffff; /* White text color */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Increased gap */
+  font-size: 1.25rem; /* Increased font size */
+  cursor: pointer;
+  padding: 14px 28px; /* Increased padding */
+  border-radius: 6px; /* Rounded corners */
+  background: transparent;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #d1d5db;
+  border-color: #ffffff; /* White border on hover */
+}
+
+/* Sign-Up Button */
+.signup-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: #800000; /* Maroon */
+  color: #ffffff;
+  padding: 14px 28px; /* Increased padding */
+  border-radius: 6px;
+  font-size: 1rem; /* Increased font size */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.signup-button:hover {
+  background-color: #5b0000; /* Darker maroon on hover */
+}
+
+/* Home Section Styling */
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 30px; /* Increased padding */
+  background: linear-gradient(to right, #800000, #4b5563); /* Maroon-Grey Gradient */
+  color: #ffffff; /* White text for contrast */
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Increased max-width */
+  margin: 0 auto;
+  gap: 40px; /* Increased gap */
+}
+
+.home-text {
+  flex: 1;
+  max-width: 600px; /* Increased max-width */
+}
+
+.home-subtitle {
+  font-size: 2.5rem; /* Increased font size */
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 24px; /* Increased margin */
+  line-height: 1.5;
+}
+
+.about-button {
+  background-color: #ffffff;
+  color: #800000; /* Maroon text */
+  padding: 16px 32px; /* Increased padding */
+  border-radius: 6px;
+  font-size: 1.25rem; /* Increased font size */
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.about-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* Image Styling */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px; /* Increased border radius */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+/* Styling for Sell/Donate Dropdown */
+.sell-menu-wrapper {
+  position: relative;
+}
+
+.sell-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Increased gap */
+}
+
+.dropdown-option {
+  padding: 12px 24px; /* Increased padding */
+  text-align: left;
+  font-size: 1rem; /* Increased font size */
+  color: #4b5563;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+}
+
+.dropdown-option:hover {
+  background-color: #f3f4f6;
+}

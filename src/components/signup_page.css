@@ -1,0 +1,86 @@
+/* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.signup-page-container {
+  max-width: 450px; /* Increased max-width for better spacing */
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.signup-page-title {
+  text-align: center;
+  font-size: 32px; /* Larger title */
+  margin-bottom: 30px; /* Increased space */
+  color: #800000; /* Maroon color */
+  font-weight: bold;
+}
+
+.signup-page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px; /* Larger label text */
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px; /* Larger input fields */
+  font-size: 18px; /* Larger text */
+  border: 2px solid #800000; /* Maroon border */
+  border-radius: 8px;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #a93226; /* Darker maroon when focused */
+}
+
+.submit-button {
+  padding: 18px 32px; /* Larger padding */
+  font-size: 20px; /* Larger font size */
+  color: #fff;
+  background-color: #800000; /* Maroon background */
+  border: 2px solid #800000; /* Maroon border */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  margin-top: 30px; /* More space above the button */
+  width: 100%; /* Full width */
+}
+
+.submit-button:hover {
+  background-color: #a93226; /* Darker maroon on hover */
+  border-color: #a93226;
+  transform: scale(1.05);
+}
+
+.submit-button:active {
+  background-color: #641e16; /* Even darker maroon on active */
+  border-color: #641e16;
+  transform: scale(1);
+}

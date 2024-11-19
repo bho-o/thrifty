@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Heading Styles */
+h1 {
+  text-align: center;
+  color: #800000; /* Maroon */
+  font-size: 36px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Label Styles */
+label {
+  margin: 15px 0 8px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Input Styles */
+input {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #800000; /* Maroon border */
+  border-radius: 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+input:focus {
+  outline: none;
+  border-color: #c0392b; /* Darker maroon on focus */
+}
+
+/* Button Styles */
+button {
+  padding: 15px;
+  margin-top: 15px;
+  background-color: #800000; /* Maroon */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #a93226; /* Darker maroon */
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #641e16; /* Even darker maroon */
+  transform: scale(1);
+}
