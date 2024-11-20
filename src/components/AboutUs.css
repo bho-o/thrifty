@@ -12,7 +12,7 @@ body {
 
 .about-us-page {
   text-align: center;
-  max-width: 1400px; /* Increased max-width */
+  max-width: 100%; /* Increased max-width */
   margin: 0;
   padding: 40px; /* Increased padding */
 }
@@ -71,8 +71,8 @@ body {
 }
 
 .social-icons-container h3 {
-  font-size: 32px; /* Increased font size */
-  color: maroon;; /* White text */
+  font-size: 50px; /* Increased font size */
+  color: maroon;; 
   margin-bottom: 30px; /* Increased margin */
 }
 
@@ -85,8 +85,8 @@ body {
 }
 
 .icon {
-  font-size: 60px; /* Increased icon size */
-  color: maroon; /* Light gray color */
+  font-size: 100px; /* Increased icon size */
+  color: white; /* Light gray color */
   transition: transform 0.3s, color 0.3s;
 }
 
@@ -107,11 +107,13 @@ body {
 }
 
 .footer-content h3 {
+  font-style: italic;
   font-size: 32px; /* Increased font size */
   color: whitesmoke; /* Gold text */
 }
 
 .footer-content h4 {
+  font-style: oblique;
   font-size: 24px; /* Increased font size */
   color: whitesmoke; /* Light pink color */
 }

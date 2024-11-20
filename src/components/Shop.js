@@ -1,8 +1,8 @@
+
 import React, { useState } from 'react';
 import { Shirt, ShoppingCart, Filter, X } from 'lucide-react';
 import Cart from './Cart';  
 import "./shop.css";
-import image from "../Assets/home.jpg"
 
 const initialProducts = [
   {
@@ -22,7 +22,6 @@ const initialProducts = [
     color: 'Gray',
     size: 'L',
     image: <img src="/assets/home.jpg" alt="Smart Casual Blazer" />
-
   },
   {
     id: 3,
@@ -63,7 +62,7 @@ const initialProducts = [
 ];
 
 function App() {
-  const [products, setProducts] = useState(initialProducts);
+  const [products] = useState(initialProducts);
   const [filters, setFilters] = useState({
     categories: [],
     colors: [],
@@ -77,17 +76,13 @@ function App() {
     setFilters(prev => {
       const updatedFilters = { ...prev };
       if (updatedFilters[filterType].includes(value)) {
-       
         updatedFilters[filterType] = updatedFilters[filterType].filter(item => item !== value);
       } else {
-       
         updatedFilters[filterType] = [...updatedFilters[filterType], value];
       }
       return updatedFilters;
     });
   };
-  
-  
 
   const handlePriceChange = (min, max) => {
     setFilters(prev => ({...prev, priceRange: [min, max]}));
@@ -96,7 +91,7 @@ function App() {
   const removeFilter = (filterType, value) => {
     handleFilterChange(filterType, value);
   };
-  
+
   const addToCart = (product) => {
     setCartItems(prevItems => [...prevItems, product]);
     console.log(`Added ${product.name} to cart`);
@@ -221,7 +216,7 @@ function App() {
           className="mb-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
         >
           <ShoppingCart size={20} className="inline mr-2" />
-          View Cart ({cartItems.length})
+          {showCart ? "Go Back" : `View Cart (${cartItems.length})`}
         </button>
 
         {showCart ? (

@@ -50,8 +50,8 @@ function About() {
       <footer className="footer1">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>THRIFTY!!</h3>
-            <h4>Latest Blog Post:</h4>
+            <h3>THRIFTY!</h3>
+            <h4>"Your Style , Your Budget , Your Thrift"</h4>
           </div>
         </div>
         <div className="footer-bottom">

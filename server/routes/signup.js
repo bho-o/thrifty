@@ -6,7 +6,6 @@ router.post('/signup/save', async (req, res) => {
   try {
     const { username, email,password} = req.body;
 
-    // Basic validation
     if (!username || !email || !password) {
       return res.status(400).json({ message: 'All fields are required' });
     }
