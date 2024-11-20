@@ -1,95 +1,5 @@
-// import React, { useState } from "react";
-// import "./sell.css";
-
-// const Sell = () => {
-//   const [formData, setFormData] = useState({
-//     type: "",
-//     weight: "",
-//     price: "",
-//     quality: "",
-//   });
-//   const [error, setError] = useState("");
-
-//   const handleChange = (e) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const response = await fetch("http://localhost:5000/sell", {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({
-//           userId: "USER_ID_HERE", // Replace with the actual user ID
-//           ...formData,
-//         }),
-//       });
-//       if (response.ok) {
-//         alert("Sell item submitted successfully!");
-//       } else {
-//         alert("Failed to submit sell item.");
-//       }
-//     } catch (error) {
-//       console.error("Error submitting sell item:", error);
-//     }
-//   };
-  
-
-//   return (
-//     <div className="container">
-//       <h1>Sell Item</h1>
-//       {error && <div className="error-message">{error}</div>}
-//       <form onSubmit={handleSubmit}>
-//         <label htmlFor="type">Type:</label>
-//         <input
-//           type="text"
-//           id="type"
-//           name="type"
-//           value={formData.type}
-//           onChange={handleChange}
-//           required
-//         />
-
-//         <label htmlFor="weight">Weight (kg or count):</label>
-//         <input
-//           type="text"
-//           id="weight"
-//           name="weight"
-//           value={formData.weight}
-//           onChange={handleChange}
-//           required
-//         />
-
-//         <label htmlFor="price">Price Limit (USD):</label>
-//         <input
-//           type="number"
-//           id="price"
-//           name="price"
-//           value={formData.price}
-//           onChange={handleChange}
-//           required
-//         />
-
-//         <label htmlFor="quality">Quality:</label>
-//         <input
-//           type="text"
-//           id="quality"
-//           name="quality"
-//           value={formData.quality}
-//           onChange={handleChange}
-//           required
-//         />
-
-//         <button type="submit">Submit</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Sell;
-
 import React, { useState } from "react";
+import './sell.css'; // Import the provided CSS file
 
 const Sell = () => {
   const [formData, setFormData] = useState({
@@ -154,90 +64,56 @@ const Sell = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-6 text-center">Sell Item</h2>
-      
-      {error && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-          {error}
-        </div>
-      )}
-      
-      {success && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
-          {success}
-        </div>
-      )}
+    <div className="container">
+      <h1>Sell Item</h1>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Type:
-          </label>
-          <input
-            type="text"
-            name="type"
-            value={formData.type}
-            onChange={handleChange}
-            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-            placeholder="Enter item type"
-          />
-        </div>
+      {error && <div className="error-message">{error}</div>}
+      {success && <div className="success-message">{success}</div>}
 
-        <div>
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Weight (kg or count):
-          </label>
-          <input
-            type="number"
-            name="weight"
-            value={formData.weight}
-            onChange={handleChange}
-            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-            placeholder="Enter weight or count"
-            step="0.01"
-          />
-        </div>
+      <form onSubmit={handleSubmit}>
+        <label>Type:</label>
+        <input
+          type="text"
+          name="type"
+          value={formData.type}
+          onChange={handleChange}
+          placeholder="Enter item type"
+        />
 
-        <div>
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Price (USD):
-          </label>
-          <input
-            type="number"
-            name="price"
-            value={formData.price}
-            onChange={handleChange}
-            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-            placeholder="Enter price"
-            step="0.01"
-          />
-        </div>
+        <label>Weight (kg or count):</label>
+        <input
+          type="number"
+          name="weight"
+          value={formData.weight}
+          onChange={handleChange}
+          placeholder="Enter weight or count"
+          step="0.01"
+        />
 
-        <div>
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Quality:
-          </label>
-          <select
-            name="quality"
-            value={formData.quality}
-            onChange={handleChange}
-            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-          >
-            <option value="">Select quality</option>
-            <option value="Excellent">Excellent</option>
-            <option value="Good">Good</option>
-            <option value="Fair">Fair</option>
-            <option value="Poor">Poor</option>
-          </select>
-        </div>
+        <label>Price (USD):</label>
+        <input
+          type="number"
+          name="price"
+          value={formData.price}
+          onChange={handleChange}
+          placeholder="Enter price"
+          step="0.01"
+        />
 
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+        <label>Quality:</label>
+        <select
+          name="quality"
+          value={formData.quality}
+          onChange={handleChange}
         >
-          Submit
-        </button>
+          <option value="">Select quality</option>
+          <option value="Excellent">Excellent</option>
+          <option value="Good">Good</option>
+          <option value="Fair">Fair</option>
+          <option value="Poor">Poor</option>
+        </select>
+
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

@@ -1,4 +1,7 @@
 /* General Container */
+*{
+  margin:0;
+}
 .thrifty-container {
   display: flex;
   flex-direction: column;
@@ -6,6 +9,7 @@
   background-color: whitesmoke; /* White background */
   width: 100%;
   height: max-content;
+  margin:0;
 }
 
 /* Header Styling */
@@ -20,7 +24,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1200px; /* Increased max-width */
-  margin: 0 auto;
+  margin: 0 ;
   padding: 0 30px; /* Increased padding */
 }
 
@@ -33,7 +37,6 @@
 
 /* Navigation Menu: Ensure buttons are aligned in a single row */
 .nav-menu {
-  color: white;
   display: flex;
   justify-content: space-evenly; /* Distribute buttons evenly */
   width: 100%; /* Ensure the buttons span the entire width */
@@ -97,7 +100,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1200px; /* Increased max-width */
-  margin: 0 auto;
+  margin: 0;
   gap: 40px; /* Increased gap */
 }
 
@@ -107,7 +110,7 @@
 }
 
 .home-subtitle {
-  font-size: 2.5rem; /* Increased font size */
+  font-size: 5rem; /* Increased font size */
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 24px; /* Increased margin */
@@ -119,7 +122,7 @@
   color: #800000; /* Maroon text */
   padding: 16px 32px; /* Increased padding */
   border-radius: 6px;
-  font-size: 1.25rem; /* Increased font size */
+  font-size: 2.5rem; /* Increased font size */
   cursor: pointer;
   text-transform: uppercase;
 }

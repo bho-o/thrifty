@@ -13,7 +13,7 @@ body {
 .about-us-page {
   text-align: center;
   max-width: 1400px; /* Increased max-width */
-  margin: 0 auto;
+  margin: 0;
   padding: 40px; /* Increased padding */
 }
 

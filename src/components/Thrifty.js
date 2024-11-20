@@ -107,10 +107,10 @@ export default function Thrifty() {
               )}
             </div>
 
-            <button onClick={() => setActiveTab('cart')} className="nav-button">
+            {/* <button onClick={() => setActiveTab('cart')} className="nav-button">
               <ShoppingBag className="icon" />
               Cart
-            </button>
+            </button> */}
             <button
               onClick={() => setActiveTab('profile')}
               className="nav-button"

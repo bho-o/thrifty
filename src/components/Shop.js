@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Shirt, ShoppingCart, Filter, X } from 'lucide-react';
+import Cart from './Cart';  
 import "./shop.css";
+import image from "../Assets/home.jpg"
 
 const initialProducts = [
   {
@@ -10,8 +12,7 @@ const initialProducts = [
     category: 'Spring',
     color: 'Blue',
     size: 'M',
-    image: <img src="C:/Users/bhoom/OneDrive/Pictures/Screenshots/Screenshot 2024-10-29 194620.png" alt="Smart Casual Blazer" />
-
+    image: <img src="../Assets/home.jpeg" alt="Smart Casual Blazer" />
   },
   {
     id: 2,
@@ -20,7 +21,8 @@ const initialProducts = [
     category: 'Smart',
     color: 'Gray',
     size: 'L',
-    image: <Shirt color="#6B7280" size={100} />
+    image: <img src="/assets/home.jpg" alt="Smart Casual Blazer" />
+
   },
   {
     id: 3,
@@ -68,33 +70,40 @@ function App() {
     sizes: [],
     priceRange: [0, 200]
   });
+  const [cartItems, setCartItems] = useState([]);
+  const [showCart, setShowCart] = useState(false);
 
   const handleFilterChange = (filterType, value) => {
     setFilters(prev => {
-      const newFilters = {...prev};
-      const index = newFilters[filterType].indexOf(value);
-      if (index > -1) {
-        newFilters[filterType].splice(index, 1);
+      const updatedFilters = { ...prev };
+      if (updatedFilters[filterType].includes(value)) {
+       
+        updatedFilters[filterType] = updatedFilters[filterType].filter(item => item !== value);
       } else {
-        newFilters[filterType].push(value);
+       
+        updatedFilters[filterType] = [...updatedFilters[filterType], value];
       }
-      return newFilters;
+      return updatedFilters;
     });
   };
+  
+  
 
   const handlePriceChange = (min, max) => {
     setFilters(prev => ({...prev, priceRange: [min, max]}));
   };
 
   const removeFilter = (filterType, value) => {
-    setFilters(prev => {
-      const newFilters = {...prev};
-      const index = newFilters[filterType].indexOf(value);
-      if (index > -1) {
-        newFilters[filterType].splice(index, 1);
-      }
-      return newFilters;
-    });
+    handleFilterChange(filterType, value);
+  };
+  
+  const addToCart = (product) => {
+    setCartItems(prevItems => [...prevItems, product]);
+    console.log(`Added ${product.name} to cart`);
+  };
+
+  const toggleCart = () => {
+    setShowCart(!showCart);
   };
 
   const filteredProducts = products.filter(product => {
@@ -207,17 +216,29 @@ function App() {
 
       {/* Main Content */}
       <main className="flex-1 p-10">
-        <div className="grid grid-cols-3 gap-6">
-          {filteredProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        <button 
+          onClick={toggleCart} 
+          className="mb-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          <ShoppingCart size={20} className="inline mr-2" />
+          View Cart ({cartItems.length})
+        </button>
+
+        {showCart ? (
+          <Cart items={cartItems} updateCart={setCartItems} />
+        ) : (
+          <div className="grid grid-cols-3 gap-6">
+            {filteredProducts.map(product => (
+              <ProductCard key={product.id} product={product} addToCart={addToCart} />
+            ))}
+          </div>
+        )}
       </main>
     </div>
   );
 }
 
-function ProductCard({ product }) {
+function ProductCard({ product, addToCart }) {
   return (
     <div className="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
       <div className="p-4 flex justify-center items-center h-48">
@@ -227,7 +248,10 @@ function ProductCard({ product }) {
         <h3 className="text-lg font-semibold">{product.name}</h3>
         <div className="flex justify-between items-center mt-2">
           <span className="text-blue-600 font-bold">${product.price.toFixed(2)}</span>
-          <button className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 flex items-center">
+          <button 
+            className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 flex items-center"
+            onClick={() => addToCart(product)}
+          >
             <ShoppingCart size={16} className="mr-2" /> Add to Cart
           </button>
         </div>
